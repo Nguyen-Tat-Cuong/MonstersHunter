@@ -57,9 +57,6 @@
     <ClInclude Include="Geometric.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BossObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -99,9 +96,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Geometric.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BossObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

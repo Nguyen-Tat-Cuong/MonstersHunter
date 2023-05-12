@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 #include "MainObject.h"
 
 //const int PLAYER_WIDTH = 60;

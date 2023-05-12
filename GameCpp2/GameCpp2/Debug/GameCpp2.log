@@ -1,1 +1,24 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(442,5): error MSB8020: The build tools for Visual Studio 2015 (Platform Toolset = 'v140') cannot be found. To build using the v140 build tools, please install Visual Studio 2015 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  main.cpp
+D:\gamekhac\GameCpp2\GameCpp2\CommonFunc.h(72,2): warning C4091: 'typedef ': ignored on left of 'GeometricFormat' when no variable is declared
+D:\gamekhac\GameCpp2\GameCpp2\CommonFunc.h(81,2): warning C4091: 'typedef ': ignored on left of 'ColorData' when no variable is declared
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(17,1): warning C4005: 'PLAYER_SPEED': macro redefinition
+D:\gamekhac\GameCpp2\GameCpp2\MainObject.h(13,1): message : see previous definition of 'PLAYER_SPEED'
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(30,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(31,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(33,43): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(34,43): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(35,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\ThreatsObject.h(36,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(173,42): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(249,26): warning C4018: '<': signed/unsigned mismatch
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(264,32): warning C4018: '<': signed/unsigned mismatch
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(288,30): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(289,29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(325,28): warning C4018: '<': signed/unsigned mismatch
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(331,34): warning C4018: '<': signed/unsigned mismatch
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(347,38): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(348,38): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(399,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(405,58): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\gamekhac\GameCpp2\GameCpp2\main.cpp(431,23): warning C4018: '<': signed/unsigned mismatch
+  GameCpp2.vcxproj -> D:\gamekhac\GameCpp2\Debug\GameCpp2.exe

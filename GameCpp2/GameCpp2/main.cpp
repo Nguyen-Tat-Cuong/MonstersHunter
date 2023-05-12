@@ -1,5 +1,4 @@
-// GameCpp2.cpp : Defines the entry point for the console application.
-//
+
 
 #include "stdafx.h"
 #include "CommonFunc.h"
@@ -12,7 +11,6 @@
 #include "TextObject.h"
 #include "PlayerPower.h"
 #include "Geometric.h"
-#include "BossObject.h"
 
 #define USE_AUDIO
 BaseObject g_background;
@@ -27,8 +25,7 @@ bool InitData()
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
 
-    //Create window
-    g_window = SDL_CreateWindow("SDL 2.0 Game Demo - Phat Trien Phan Mem 123AZ",
+    g_window = SDL_CreateWindow("Monsters Hunter",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if(g_window == NULL )
@@ -179,14 +176,6 @@ int main(int argc, char* argv[])
     std::vector<ThreatsObject*> threats_list = MakeThreadList();
 
 
-    //Init Boss Object
-    BossObject bossObject;
-    bossObject.LoadImg("img//boss_object.png", g_screen);
-    bossObject.set_clips();
-    int xPosBoss = MAX_MAP_X*TILE_SIZE - SCREEN_WIDTH*0.6;
-    bossObject.set_xpos(xPosBoss);
-    bossObject.set_ypos(10);
-
     ExplosionObject exp_threats;
     ExplosionObject exp_main;
 
@@ -291,8 +280,7 @@ int main(int argc, char* argv[])
 
            if (is_col2 || is_col1)
            {
-               //obj_threat->Reset(SCREEN_WIDTH, SCREEN_HEIGHT);
-               //walk_object.set_is_move(true);
+
                int width_exp_frame = exp_main.get_frame_height();
                int heiht_exp_height = exp_main.get_frame_width();
                for (int ex = 0; ex < 4; ex++)
@@ -305,9 +293,6 @@ int main(int argc, char* argv[])
                    exp_main.Show(g_screen);
                    SDL_RenderPresent(g_screen);
                }
-#ifdef USE_AUDIO 
-               Mix_PlayChannel(-1, g_sound_ex_main, 0);
-#endif
                num_die++;
                if (num_die <= 3)
                {
@@ -367,22 +352,13 @@ int main(int argc, char* argv[])
                            exp_threats.Show(g_screen);
                        }
 
-                       // p_threat->Reset(SCREEN_WIDTH, SCREEN_HEIGHT);
+
                        p_player.RemoveBullet(am);
 
-                       //if (obj_threat->get_type_move() == ThreatsObject::MOVING_CONTINOUS)
-                       //{
-                       //    obj_threat->Reset();
-                       //}
-                       //else
-                       //{
                            obj_threat->Free();
                            threats_list.erase(threats_list.begin() + i);
-                       //}
 
-#ifdef USE_AUDIO 
-                       Mix_PlayChannel(-1, g_sound_explosion, 0, -1);
-#endif
+
                    }
                }
            }
@@ -415,7 +391,7 @@ int main(int argc, char* argv[])
 
        //Show mark value to screen
        std::string val_str_mark = std::to_string(mark_value);
-       std::string strMark("Mark: ");
+       std::string strMark("Mark (Monsters): ");
        strMark += val_str_mark;
 
        mark_game.SetText(strMark);
@@ -429,16 +405,6 @@ int main(int argc, char* argv[])
        money_count.RenderText(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
 
 
-
-       //Process Boss
-       int val = MAX_MAP_X*TILE_SIZE - (ga_map.start_x_ + p_player.GetRect().x);
-       if (val <= SCREEN_WIDTH)
-       {
-        bossObject.SetMapXY(ga_map.start_x_, ga_map.start_y_);
-        bossObject.DoPlayer(ga_map);
-        bossObject.MakeBullet(g_screen, SCREEN_WIDTH, SCREEN_HEIGHT);
-        bossObject.Show(g_screen);
-       }
 
         //Update screen
         SDL_RenderPresent(g_screen);

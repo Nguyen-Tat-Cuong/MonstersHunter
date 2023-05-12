@@ -1,5 +1,4 @@
 
-//Copyright: Phattrienphanmem123az.com
 #ifndef COMMON_FUNC_H_
 #define COMMON_FUNC_H_
 
