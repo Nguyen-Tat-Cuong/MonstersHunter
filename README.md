@@ -4,4 +4,5 @@ Cách thức di chuyển
 + Di chuyển sang trái, sang phải bằng hai nút di chuyển trên bàn phím.
 + Nhân vật bắn đạn bằng chuột phải.
 + Nhân vật nhảy bằng chuột trái.
+
 Mong mọi người sẽ có giây phút thoải mái và vui vẻ khi chơi game.
